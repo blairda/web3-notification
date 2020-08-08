@@ -2,8 +2,15 @@
     Section 1
 ============= */
 #section-1{
-    .grid-content{
-        
-    }
+    div{
+        background-image: url("../img/section-1/aqua1.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 60vh;
 
+        @include md{
+            height: 90vh;
+        }
+    }
 }

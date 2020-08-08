@@ -9,8 +9,18 @@ figure{
 ul{
     padding: 0;
     margin: 0;
+    list-style-type: none;
     li{
         list-style: none;
     }
 }
 
+.yellow-bar{
+    border-bottom: solid 5px $yellow;
+    width: 50%;
+    margin: 8% 25%;
+    @include md{
+        border-bottom: solid 8px $yellow;
+        margin: 5% 25%;
+    }
+}

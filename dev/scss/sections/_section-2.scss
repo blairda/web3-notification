@@ -1,0 +1,68 @@
+/* =============
+    Section 2
+============= */
+#section-2{
+    h2{
+        
+    }
+    #cards {
+        ul {
+            display: grid;
+            gap: 20px;
+
+            @include md {
+                display: grid;
+                grid-template-areas: ". g-1 g-1 g-2 g-2 ."
+                    ". . g-3 g-3 . .";
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+            li {
+                background-color: $light-blue;
+
+                div {
+                    background-size: cover;
+                    background-size: cover;
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    height: 25vh;
+                    border: 1px solid #000;
+                }
+
+                section {
+                    padding: 20px;
+                }
+            }
+
+            #card-1 {
+                @include md {
+                    grid-area: g-1;
+                }
+
+                div {
+                    background-image: url("../img/section-3/aqua2.jpg");
+                }
+            }
+
+            #card-2 {
+                @include md {
+                    grid-area: g-2;
+                }
+
+                div {
+                    background-image: url("../img/section-3/aqua3.jpg");
+                }
+            }
+
+            #card-3 {
+                @include md {
+                    grid-area: g-3;
+                }
+
+                div {
+                    background-image: url("../img/section-3/aqua4.jpg");
+                }
+            }
+        }
+    }
+}
