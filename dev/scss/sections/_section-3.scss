@@ -2,5 +2,41 @@
     Section 3
 ============= */
 #section-3{
+h2{
+    text-align: center;
+    color: $teal;
+    margin: 2% 0;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+}
+p{
+    margin: 5%;
+    color: $blue;
+    text-align: center;
+    font-size: 1.5em;
+    @include md{
+        margin: 3% 25%;
+    }
+}
+margin-bottom: 10%;
 
+    #response{
+        font-size: 1em;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button:hover,
+        button:active {
+            color: $light-blue;
+            background-color: $blue;
+            transition: 0.2s;
+        }
+
+    }
 }

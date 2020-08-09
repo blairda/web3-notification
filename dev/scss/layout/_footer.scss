@@ -1,14 +1,58 @@
 /* =============
     Footer
 ============= */
-#footer-image{
+#footer{
     background-image: url("../img/footer/aqua5.jpg");
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 50vh;
-
+    padding-top: 10%;
     @include md{
-        height: 80vh;
+        height: 90vh;
+    }
+    display: grid;
+    grid-template-columns: "30% auto 30%";
+    grid-template-areas: "l . r";
+    #l{
+        grid-area: l;
+        margin: auto 0;
+        ul{
+            color: $light-blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                margin: 2%;
+                font-size: 1.5em;
+
+            }
+        }
+    }
+    #r{
+        grid-area: r;
+        margin: auto 0;
+    }
+    .group{
+        #no{
+            margin: 7% 0 7%;
+           }
+        p{
+            text-align: center;
+            color: $light-blue;
+            font-size: 1.2em;
+        }
+        .hide{
+            display: none;
+            li{
+                color: $light-blue;
+                text-align: center;
+                padding: 3px;
+            }
+            @include lg{
+                display: block !important;
+            }
+        }
+    margin-bottom: 10%;
     }
 }

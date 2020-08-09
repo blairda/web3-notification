@@ -16,23 +16,23 @@
 
 <body>
     <header>
-        <div>
-            <div>
-                <!-- logo here -->
+            <div id="logo">
+                <a href="index.html"><img src="img/header/logo.svg" alt="logo"></a>
             </div>
-            <div>
-                <p>Welcome</p>
-                <p>Exhibits</p>
-                <p>About</p>
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Welcome</a></li>
+                    <li><a href="#">Exhibits</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
             </div>
-        </div>
     </header>
     <section id="section-1">
             <div></div>
             <h1>
                 Welcome to the Aquarium!
             </h1>
-            <p>We're honored to have been voted the #1 aquarium in New Jersey by Aquariums USA!</p>
+            <p>We're honored to have been voted the #1 aquarium in New Jersey by <i>Aquariums</i> USA!</p>
             <aside class="yellow-bar"></aside>
         </section>
     <section id="section-2">
@@ -70,26 +70,64 @@
                     <p>Since the summer of 2000, the aquarium has been dedicated to educating the public on all aspects of marine life and conservation.</p>
                     <p>Each exhibit is designed to promote awareness of the animals, their habitats and conservation.</p>
                     <p>We strive to provide our guests with a unique and memorable experience through creative exhibits as well as innovative educational and outreach programs.</p>
+                
+                    <h2>Visit us!</h2>
+                    <p>22 Ocean Boulevard, Best Beach, NJ 07924</p>
+                    <div>
+                        <button class="blue-button" onclick="notification()">Directions</button>
+                    </div>
+                
+                    <p id="response"></p>
                 </section>
-    <footer>
-                        <div id="footer-image"></div>
-                        <div>
+    <footer id="footer">
+                        <div id="l">
+                            <div class="group">
                             <p>Visit us at:</p>
                             <p>22 Ocean Boulevard</p>
                             <p>Best Beach, NJ 07924</p>
-                            <p>732-982-1506</p>
+                            <div id="no"><p>732-982-1506</p></div>
+                            <ul>
+                                <li><i class="fab fa-facebook"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><i class="fab fa-youtube"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                            </ul>
+                            </div>
                         </div>
-                        <div>
-                            <p>Adopt an Animal</p>
-                            <p>Join our Team</p>
-                            <p>Help</p>
+                        <div id="r">
+                            <div class="group">
+                                <p>Adopt an Animal</p>
+                                    <ul class="hide">
+                                        <li>Penguins</li>
+                                        <li>Sea Turtles</li>
+                                        <li>Sharks</li>
+                                    </ul>
+                            </div>
+                            <div class="group">
+                                <p>Join our Team</p>
+                                <ul class="hide">
+                                    <li>Employment</li>
+                                    <li>Internship</li>
+                                    <li>ShaVolunteerrks</li>
+                                </ul>
+                            </div>
+                            <div class="group">
+                                <p>Help</p>
+                                <ul class="hide">
+                                    <li>Contact us</li>
+                                    <li>FAQS</li>
+                                    <li>Directions</li>
+                                </ul>
+                            </div>
                         </div>
                     </footer>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Greensock ScrollTo Plugin-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollToPlugin.min.js"></script>
     <!-- Greensock -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 
     <script src="js/scripts-min.js"></script>
 </body>

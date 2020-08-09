@@ -3,18 +3,34 @@
 ============= */
 #section-2{
     h2{
-        
+        text-align: center;
+        color: $teal;
+        margin: 3% 20%;
+        font-family: 'Lora', serif;
+        font-weight: 700;
+        font-size: 1.5em;
+        @include md{
+            font-size: 2em;
+        }
     }
     #cards {
+        p{
+            text-align: center;
+            padding: 5% 10% 10% 10%;
+            color: $dark-blue;
+            font-size: 1.3em;
+            font-weight: 700;
+        }
         ul {
             display: grid;
-            gap: 20px;
+
 
             @include md {
                 display: grid;
                 grid-template-areas: ". g-1 g-1 g-2 g-2 ."
                     ". . g-3 g-3 . .";
                 grid-template-columns: repeat(6, 1fr);
+                gap: 20px;
             }
 
             li {
@@ -22,11 +38,10 @@
 
                 div {
                     background-size: cover;
-                    background-size: cover;
                     background-position: top;
                     background-repeat: no-repeat;
-                    height: 25vh;
-                    border: 1px solid #000;
+                    height: 50vh;
+                    border-bottom: 15px solid $yellow;
                 }
 
                 section {
@@ -40,7 +55,7 @@
                 }
 
                 div {
-                    background-image: url("../img/section-3/aqua2.jpg");
+                    background-image: url("../img/section-2/aqua3.jpg");
                 }
             }
 
@@ -50,7 +65,7 @@
                 }
 
                 div {
-                    background-image: url("../img/section-3/aqua3.jpg");
+                    background-image: url("../img/section-2/aqua2.jpg");
                 }
             }
 
@@ -60,7 +75,7 @@
                 }
 
                 div {
-                    background-image: url("../img/section-3/aqua4.jpg");
+                    background-image: url("../img/section-2/aqua4.jpg");
                 }
             }
         }

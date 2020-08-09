@@ -328,6 +328,9 @@ ul {
   ul li {
     list-style: none; }
 
+a {
+  text-decoration: none; }
+
 .yellow-bar {
   border-bottom: solid 5px #F9C243;
   width: 50%;
@@ -353,6 +356,20 @@ p {
 /* =============
     Buttons
 ============= */
+.blue-button {
+  background-color: #139ECF;
+  border: solid 5px #F9C243 !important;
+  padding: 2%;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  font-family: 'Lato', sans-serif;
+  color: #E9F9FF;
+  font-size: 1.3em;
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    .blue-button {
+      padding: 1%; } }
 /* =============
     Forms
 ============= */
@@ -374,18 +391,102 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  background-color: #2767C5;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 8% auto auto;
+  grid-template-areas: "l . m"; }
+  header #logo {
+    grid-area: l;
+    place-items: center; }
+    header #logo img {
+      width: 100%;
+      padding: 10px; }
+  header #menu {
+    grid-area: m;
+    padding: 15px;
+    align-self: center; }
+    header #menu ul {
+      display: flex;
+      justify-content: flex-end; }
+      header #menu ul li {
+        margin: 0 10px;
+        font-family: 'Lora', serif;
+        font-weight: 700;
+        cursor: pointer; }
+        header #menu ul li a:link,
+        header #menu ul li a:visited {
+          cursor: pointer;
+          color: #F9C243;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 1.1em; }
+        header #menu ul li a:hover,
+        header #menu ul li a:active {
+          color: #E9F9FF;
+          transition: 0.3s; }
+  @media (min-width: 992px) {
+    header {
+      display: grid;
+      grid-template-columns: 5% auto auto;
+      grid-template-areas: "l . m"; } }
+  @media (min-width: 1200px) {
+    header {
+      display: grid;
+      grid-template-columns: 4% auto auto;
+      grid-template-areas: "l . m"; } }
 /* =============
     Footer
 ============= */
-#footer-image {
+#footer {
   background-image: url("../img/footer/aqua5.jpg");
-  background-position: top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 50vh; }
+  height: 50vh;
+  padding-top: 10%;
+  display: grid;
+  grid-template-columns: "30% auto 30%";
+  grid-template-areas: "l . r"; }
   @media (min-width: 768px) {
-    #footer-image {
-      height: 80vh; } }
+    #footer {
+      height: 90vh; } }
+  #footer #l {
+    grid-area: l;
+    margin: auto 0; }
+    #footer #l ul {
+      color: #E9F9FF;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      #footer #l ul li {
+        margin: 2%;
+        font-size: 1.5em; }
+  #footer #r {
+    grid-area: r;
+    margin: auto 0; }
+  #footer .group {
+    margin-bottom: 10%; }
+    #footer .group #no {
+      margin: 7% 0 7%; }
+    #footer .group p {
+      text-align: center;
+      color: #E9F9FF;
+      font-size: 1.2em; }
+    #footer .group .hide {
+      display: none; }
+      #footer .group .hide li {
+        color: #E9F9FF;
+        text-align: center;
+        padding: 3px; }
+      @media (min-width: 992px) {
+        #footer .group .hide {
+          display: block !important; } }
 /* =============
     Section 1
 ============= */
@@ -394,48 +495,119 @@ textarea {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 60vh; }
+  height: 60vh;
+  position: relative; }
   @media (min-width: 768px) {
     #section-1 div {
       height: 90vh; } }
+#section-1 h1 {
+  background-color: #139ECF;
+  text-align: center;
+  color: #E9F9FF;
+  padding: 1%;
+  font-size: 2.5em;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-style: italic; }
+  @media (min-width: 992px) {
+    #section-1 h1 {
+      position: absolute;
+      bottom: 25%;
+      margin-right: 25%;
+      padding: 1% 8%;
+      font-size: 3em; } }
+#section-1 p {
+  background-color: #E9F9FF;
+  margin: 6% 0 3%;
+  text-align: center;
+  color: #2767C5;
+  padding: 2% 21%;
+  font-size: 1.5em;
+  font-weight: 400; }
+
 /* =============
     Section 2
 ============= */
+#section-2 h2 {
+  text-align: center;
+  color: #139ECF;
+  margin: 3% 20%;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 1.5em; }
+  @media (min-width: 768px) {
+    #section-2 h2 {
+      font-size: 2em; } }
+#section-2 #cards p {
+  text-align: center;
+  padding: 5% 10% 10% 10%;
+  color: #122F69;
+  font-size: 1.3em;
+  font-weight: 700; }
+
 #section-2 #cards ul {
-  display: grid;
-  gap: 20px; }
+  display: grid; }
   @media (min-width: 768px) {
     #section-2 #cards ul {
       display: grid;
       grid-template-areas: ". g-1 g-1 g-2 g-2 ." ". . g-3 g-3 . .";
-      grid-template-columns: repeat(6, 1fr); } }
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px; } }
   #section-2 #cards ul li {
     background-color: #E9F9FF; }
     #section-2 #cards ul li div {
       background-size: cover;
-      background-size: cover;
       background-position: top;
       background-repeat: no-repeat;
-      height: 25vh;
-      border: 1px solid #000; }
+      height: 50vh;
+      border-bottom: 15px solid #F9C243; }
     #section-2 #cards ul li section {
       padding: 20px; }
   @media (min-width: 768px) {
     #section-2 #cards ul #card-1 {
       grid-area: g-1; } }
   #section-2 #cards ul #card-1 div {
-    background-image: url("../img/section-3/aqua2.jpg"); }
+    background-image: url("../img/section-2/aqua3.jpg"); }
   @media (min-width: 768px) {
     #section-2 #cards ul #card-2 {
       grid-area: g-2; } }
   #section-2 #cards ul #card-2 div {
-    background-image: url("../img/section-3/aqua3.jpg"); }
+    background-image: url("../img/section-2/aqua2.jpg"); }
   @media (min-width: 768px) {
     #section-2 #cards ul #card-3 {
       grid-area: g-3; } }
   #section-2 #cards ul #card-3 div {
-    background-image: url("../img/section-3/aqua4.jpg"); }
+    background-image: url("../img/section-2/aqua4.jpg"); }
 
 /* =============
     Section 3
 ============= */
+#section-3 {
+  margin-bottom: 10%; }
+  #section-3 h2 {
+    text-align: center;
+    color: #139ECF;
+    margin: 2% 0;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    display: grid;
+    place-items: center; }
+  #section-3 p {
+    margin: 5%;
+    color: #2767C5;
+    text-align: center;
+    font-size: 1.5em; }
+    @media (min-width: 768px) {
+      #section-3 p {
+        margin: 3% 25%; } }
+  #section-3 #response {
+    font-size: 1em; }
+  #section-3 div {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #section-3 div button:hover,
+    #section-3 div button:active {
+      color: #E9F9FF;
+      background-color: #2767C5;
+      transition: 0.2s; }

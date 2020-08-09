@@ -12,5 +12,32 @@
         @include md{
             height: 90vh;
         }
+        position: relative;
+    }
+    h1{
+        background-color: $teal;
+        text-align: center;
+        color: $light-blue;
+        padding: 1%;
+        font-size: 2.5em;
+        font-family: 'Lora', serif;
+        font-weight: 700;
+        font-style: italic;
+        @include lg{
+            position: absolute;
+            bottom: 25%;
+            margin-right: 25%;
+            padding: 1% 8%;
+            font-size: 3em;
+        }
+    }
+    p{
+        background-color: $light-blue;
+        margin: 6% 0 3%;
+        text-align: center;
+        color: $blue;
+        padding: 2% 21%;
+        font-size: 1.5em;
+        font-weight: 400;
     }
 }
