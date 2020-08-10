@@ -1,46 +1,49 @@
 /* =============
     Header
 ============= */
-header{
+header {
     background-color: $blue;
+    display: grid;
+    grid-template-areas: "l . m";
+    grid-template-columns: 8% auto auto;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 8% auto auto;
-    grid-template-areas: "l . m";
-    
-    #logo{
+
+    #logo {
         grid-area: l;
-        place-items: center;
-        img{
+
+        img {
+            padding: 15px 30px;
             width: 100%;
-            padding: 10px;
         }
     }
+
     #menu {
+        align-self: center;
         grid-area: m;
         padding: 15px;
-        align-self: center;
-        ul{
+
+        ul {
             display: flex;
             justify-content: flex-end;
-            li{
-                margin: 0 10px;
+
+            li {
+                cursor: pointer;
                 font-family: 'Lora', serif;
                 font-weight: 700;
-                cursor: pointer;
-                
+                margin: 0 20px;
+
                 a:link,
                 a:visited {
-                    cursor: pointer;
                     color: $yellow;
+                    font-size: 1.1em;
                     text-decoration: none;
                     transition: 0.3s;
-                    font-size: 1.1em;
                 }
+
                 a:hover,
                 a:active {
                     color: $light-blue;
@@ -48,16 +51,17 @@ header{
                 }
             }
         }
+    }
 
-}
-@include lg{
-    display: grid;
-    grid-template-columns: 5% auto auto;
-    grid-template-areas: "l . m";
-}
-@include xl{
-    display: grid;
-    grid-template-columns: 4% auto auto;
-    grid-template-areas: "l . m";
-}
+    @include lg {
+        display: grid;
+        grid-template-areas: "l . m";
+        grid-template-columns: 5% auto auto;
+    }
+
+    @include xl {
+        display: grid;
+        grid-template-areas: "l . m";
+        grid-template-columns: 4% auto auto;
+    }
 }

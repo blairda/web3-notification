@@ -1,51 +1,61 @@
 /* =============
     Section 2
 ============= */
-#section-2{
-    h2{
-        text-align: center;
+#section-2 {
+    h2 {
         color: $teal;
-        margin: 3% 20%;
         font-family: 'Lora', serif;
-        font-weight: 700;
         font-size: 1.5em;
-        @include md{
+        font-weight: 700;
+        margin: 3% 20%;
+        text-align: center;
+
+        @include md {
             font-size: 2em;
         }
     }
+
     #cards {
-        p{
-            text-align: center;
-            padding: 5% 10% 10% 10%;
+        p {
             color: $dark-blue;
             font-size: 1.3em;
             font-weight: 700;
+            padding: 3% 0;
+            text-align: center;
         }
+
         ul {
             display: grid;
 
-
             @include md {
                 display: grid;
+                gap: 30px;
                 grid-template-areas: ". g-1 g-1 g-2 g-2 ."
                     ". . g-3 g-3 . .";
                 grid-template-columns: repeat(6, 1fr);
-                gap: 20px;
             }
 
             li {
                 background-color: $light-blue;
 
                 div {
-                    background-size: cover;
-                    background-position: top;
+                    background-position: center;
                     background-repeat: no-repeat;
-                    height: 50vh;
+                    background-size: cover;
                     border-bottom: 15px solid $yellow;
+                    height: 50vh;
+
+                    @include md {
+                        height: 30vh;
+                    }
+
+                    @include lg {
+                        height: 50vh;
+                    }
                 }
 
                 section {
-                    padding: 20px;
+                    padding: 30px;
                 }
             }
 

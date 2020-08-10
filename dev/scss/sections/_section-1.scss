@@ -1,43 +1,48 @@
 /* =============
     Section 1
 ============= */
-#section-1{
-    div{
+#section-1 {
+    div {
         background-image: url("../img/section-1/aqua1.jpg");
         background-position: center;
-        background-size: cover;
         background-repeat: no-repeat;
-        height: 60vh;
-
-        @include md{
-            height: 90vh;
-        }
+        background-size: cover;
+        height: 75vh;
         position: relative;
+
+        @include lg {
+            height: 95vh;
+        }
     }
-    h1{
+
+    h1 {
         background-color: $teal;
-        text-align: center;
         color: $light-blue;
-        padding: 1%;
-        font-size: 2.5em;
         font-family: 'Lora', serif;
-        font-weight: 700;
+        font-size: 2.5em;
         font-style: italic;
-        @include lg{
-            position: absolute;
+        font-weight: 700;
+        padding: 1%;
+        text-align: center;
+        letter-spacing: 1px;
+        padding: 2%;
+
+        @include lg {
             bottom: 25%;
+            font-size: 3em;
             margin-right: 25%;
             padding: 1% 8%;
-            font-size: 3em;
+            position: absolute;
         }
     }
-    p{
+
+    p {
         background-color: $light-blue;
-        margin: 6% 0 3%;
-        text-align: center;
         color: $blue;
-        padding: 2% 21%;
         font-size: 1.5em;
         font-weight: 400;
+        margin: 6% 0 3%;
+        padding: 2% 21%;
+        text-align: center;
     }
 }

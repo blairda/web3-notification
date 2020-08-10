@@ -1,58 +1,89 @@
 /* =============
     Footer
 ============= */
-#footer{
+#footer {
     background-image: url("../img/footer/aqua5.jpg");
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: "l . r";
+    grid-template-columns: "30% auto 30%";
     height: 50vh;
     padding-top: 10%;
-    @include md{
+
+    @include md {
         height: 90vh;
     }
-    display: grid;
-    grid-template-columns: "30% auto 30%";
-    grid-template-areas: "l . r";
-    #l{
+
+    #l {
         grid-area: l;
         margin: auto 0;
-        ul{
+
+        ul {
+            align-items: center;
             color: $light-blue;
             display: flex;
-            align-items: center;
             justify-content: center;
-            li{
-                margin: 2%;
-                font-size: 1.5em;
 
+            li {
+                font-size: 1.5em;
+                margin: 2%;
+
+                i {
+                    cursor: pointer;
+
+                    &:link,
+                    &:visited {
+                        font-size: 1.5em;
+                        transition: 0.3s;
+                    }
+
+                    &:hover,
+                    &:active {
+                        color: $dark-blue;
+                        font-size: 1.51em;
+                        transition: 0.3s;
+                    }
+                }
             }
         }
     }
-    #r{
+
+    #r {
         grid-area: r;
         margin: auto 0;
     }
-    .group{
-        #no{
+
+    .group {
+        margin-bottom: 10%;
+
+        #no {
             margin: 7% 0 7%;
-           }
-        p{
-            text-align: center;
+        }
+
+        p {
             color: $light-blue;
             font-size: 1.2em;
+            text-align: center;
         }
-        .hide{
+
+        .hide {
             display: none;
-            li{
+
+            li {
                 color: $light-blue;
-                text-align: center;
                 padding: 3px;
+                text-align: center;
             }
-            @include lg{
+
+            @include lg {
                 display: block !important;
             }
         }
-    margin-bottom: 10%;
+    }
+
+    span {
+        font-weight: bold;
     }
 }
