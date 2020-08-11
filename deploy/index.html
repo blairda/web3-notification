@@ -63,17 +63,43 @@
             </section>
     <section id="section-3">
                     <h2>Learn more about the founding of our immersive aquarium:</h2>
-                    <p>Since the summer of 2000, the aquarium has been dedicated to educating the public on all aspects of marine life and conservation.</p>
+                    <p>Since the summer of 2000, the aquarium has been dedicated to educating the public on all aspects of marine life
+                        and conservation.</p>
                     <p>Each exhibit is designed to promote awareness of the animals, their habitats and conservation.</p>
                     <p>We strive to provide our guests with a unique and memorable experience through creative exhibits as well as
                         innovative educational and outreach programs.</p>
                     <aside class="yellow-bar"></aside>
-                    <h2>Visit us!</h2>
-                    <p>22 Ocean Boulevard, Best Beach, NJ 07924</p>
-                    <div>
-                        <button class="blue-button" onclick="notification()">Directions</button>
+                
+                    <!-- <section id="map-container">
+                        <div>
+                            <div id="map"></div>
+                        </div>
+                    </section> -->
+                
+                    <h2>Find your way to our Aquarium!</h2>
+                
+                    <!-- Trigger/Open The Modal -->
+                    <div id="button-container">
+                        <button class="yellow-button" id="myBtn">View Map<i class="fas fa-map-marker-alt"></i></button>
                     </div>
-                    <p id="response"></p>
+                
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                
+                            <section id="map-container">
+                                <div>
+                                    <div id="map"></div>
+                                </div>
+                            </section>
+                        </div>
+                
+                    </div>
+                
                 </section>
     <footer id="footer">
                         <div id="l">
@@ -119,6 +145,198 @@
                             </div>
                         </div>
                     </footer>
+
+
+    <script>
+        function initMap() {
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -33.914745,
+                    lng: 25.103129
+                },
+                zoom: 12,
+
+                // change to satellite with labels default view
+                mapTypeId: 'hybrid',
+
+                // hide school
+                // hide: [{
+                //     featureType: "poi.school",
+                //     stylers: [{
+                //         visibility: "off"
+                //     }]
+                // }],
+
+                styles: [
+                    // change to dark brown geometry
+                    {
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#150700'
+                        }]
+                    },
+                     // change to brown text stroke
+                    {
+                        elementType: 'labels.text.stroke',
+                        stylers: [{
+                            color: '#3F2311'
+                        }]
+                    },
+                    // change to orange text fill
+                    {
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#E18A37'
+                        }]
+                    },
+                    {
+                        featureType: 'administrative.locality',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#d59563'
+                        }]
+                    },
+                    {
+                        featureType: 'poi',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#d59563'
+                        }]
+                    },
+                    {
+                        // change to green
+                        featureType: 'poi.park',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#141A02'
+                        }]
+                    },
+                    {
+                        featureType: 'poi.park',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#6b9a76'
+                        }]
+                    },
+                    {
+                        featureType: 'road',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#38414e'
+                        }]
+                    },
+                    {
+                        featureType: 'road',
+                        elementType: 'geometry.stroke',
+                        stylers: [{
+                            color: '#212a37'
+                        }]
+                    },
+                    {
+                        featureType: 'road',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#9ca5b3'
+                        }]
+                    },
+                    {
+                        // hide school
+                        featureType: 'poi.school',
+                        // elementType: 'labels.text.fill',
+                        stylers: [{
+                            // color: '#9ca5b3'
+                            visibility: "off"
+                        }]
+                    },
+                    {
+                        featureType: 'road.highway',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#746855'
+                        }]
+                    },
+                    {
+                        featureType: 'road.highway',
+                        elementType: 'geometry.stroke',
+                        stylers: [{
+                            color: '#1f2835'
+                        }]
+                    },
+                    {
+                        featureType: 'road.highway',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#f3d19c'
+                        }]
+                    },
+                    {
+                        featureType: 'transit',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#2f3948'
+                        }]
+                    },
+                    {
+                        featureType: 'transit.station',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#d59563'
+                        }]
+                    },
+                    {
+                        // change to light-blue
+                        featureType: 'water',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#AFBBBA'
+                        }]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#515c6d'
+                        }]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'labels.text.stroke',
+                        stylers: [{
+                            color: '#17263c'
+                        }]
+                    }
+                ]
+            });
+
+            var myLatLng = {
+                lat: -33.914745,
+                lng: 25.103129
+            };
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                title: "Hello!"
+            });
+
+            marker.addListener("click", toggleBounce);
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrgc38FmWsOp9oGyoXorMzh62whWUmZk0&callback=initMap">
+    </script>
+
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

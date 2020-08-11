@@ -8,8 +8,8 @@
         color: $teal;
         display: grid;
         font-family: 'Lora', serif;
-        font-weight: 700;
         font-size: 2em;
+        font-weight: 700;
         margin: 2% 0;
         place-items: center;
         text-align: center;
@@ -25,21 +25,87 @@
         }
     }
 
-    #response {
-        font-size: 1em;
-    }
+.modal {
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Full height */
+    overflow: auto;
+    /* Full width */
+    height: 100%;
+    /* Hidden by default */
+    position: fixed;
+    /* Location of the box */
+    left: 0;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Stay in place */
+    z-index: 1;
+    display: none;
+    top: 0;
+    width: 100%;
+}
 
-    div {
-        align-items: center;
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    height: 75%;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+    #button-container{
         display: flex;
+        align-items: center;
         justify-content: center;
-        margin-top: 3%;
-
-        button:hover,
-        button:active {
-            background-color: $blue;
-            color: $light-blue;
+        button:link,
+        button:visited {
             transition: 0.2s;
         }
+        button:hover,
+        button:active {
+            background-color: $light-blue;
+            transition: 0.2s;
+        }
+
+        #myBtn {
+            font-weight: bold;
+            width: 200px;
+
+            i{
+                padding-left: 15px;
+            }
+        }
     }
+
+    #map-container {
+        background-color: $blue;
+        padding-bottom: 5%;
+    
+        #map {
+            background-color: $blue;
+            height: 300px;
+            width: 100%;
+    
+            @include md {
+                height: 450px;
+            }
+        }
+    }
+
 }

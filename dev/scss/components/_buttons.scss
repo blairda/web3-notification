@@ -1,16 +1,17 @@
 /* =============
     Buttons
 ============= */
-.blue-button{
-    background-color: $teal;
-    border: solid 5px $yellow !important;
+.yellow-button{
+    background-color: $yellow;
+    border: solid 5px $yellow;
+    border-radius: 10px;
     padding: 2%;
     margin: 0;
     top: 50%;
     left: 50%;
 
     font-family: 'Lato', sans-serif;
-    color: $light-blue;
+    color: $dark-blue;
     font-size: 1.3em;
 
     @include md{
