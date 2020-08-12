@@ -339,7 +339,6 @@ a {
     .yellow-bar {
       border-bottom: solid 8px #F9C243;
       margin: 5% 25%; } }
-
 /* =============
     Typography
 ============= */
@@ -373,6 +372,11 @@ p {
   @media (min-width: 768px) {
     .yellow-button {
       padding: 1%; } }
+.nav {
+  color: #F9C243;
+  border-style: none;
+  background-color: #2767C5;
+  font-size: 1.3em; }
 
 /* =============
     Forms
@@ -421,15 +425,17 @@ header {
         cursor: pointer;
         font-family: 'Lora', serif;
         font-weight: 700;
-        margin: 0 20px; }
-        header #menu ul li a:link,
-        header #menu ul li a:visited {
+        margin: 0 20px;
+        color: #F9C243;
+        background-color: rgba(0, 0, 0, 0); }
+        header #menu ul li button:link,
+        header #menu ul li button:visited {
           color: #F9C243;
           font-size: 1.3em;
           text-decoration: none;
           transition: 0.3s; }
-        header #menu ul li a:hover,
-        header #menu ul li a:active {
+        header #menu ul li button:hover,
+        header #menu ul li button:active {
           color: #E9F9FF;
           transition: 0.3s; }
   @media (min-width: 992px) {
@@ -442,7 +448,6 @@ header {
       display: grid;
       grid-template-areas: "l . m";
       grid-template-columns: 4% auto auto; } }
-
 /* =============
     Footer
 ============= */
@@ -515,7 +520,6 @@ header {
   @media (min-width: 992px) {
     #section-1 div {
       height: 95vh; } }
-
 #section-1 h1 {
   background-color: #139ECF;
   color: #E9F9FF;
@@ -534,7 +538,6 @@ header {
       margin-right: 25%;
       padding: 1% 8%;
       position: absolute; } }
-
 #section-1 p {
   background-color: #E9F9FF;
   color: #2767C5;
@@ -557,7 +560,6 @@ header {
   @media (min-width: 768px) {
     #section-2 h2 {
       font-size: 2em; } }
-
 #section-2 #cards p {
   color: #122F69;
   font-size: 1.3em;
@@ -628,9 +630,8 @@ header {
         margin: 1% 20%; } }
   #section-3 .modal {
     /* Enable scroll if needed */
-    background-color: black;
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(18, 47, 105, 0.6);
     /* Full height */
     overflow: auto;
     /* Full width */
@@ -648,32 +649,37 @@ header {
     width: 100%; }
   #section-3 .modal-content {
     background-color: #E9F9FF;
-    border: 1px solid #888;
+    border-bottom: 10px solid #F9C243;
     height: 75vh;
     margin: auto;
     padding: 20px;
     width: 90%; }
     #section-3 .modal-content #go-button {
       background-color: #F9C243;
-      width: 150px;
       height: 50px;
-      margin: 1%; }
+      margin: 5%;
+      width: 125px; }
       #section-3 .modal-content #go-button a {
+        color: #122F69;
         font-size: 1em;
-        color: #122F69; }
+        text-align: center; }
         #section-3 .modal-content #go-button a i {
           color: #122F69;
           font-size: 1em;
-          padding: 0 5% 0 5%; }
+          padding-left: 7%; }
+      @media (min-width: 992px) {
+        #section-3 .modal-content #go-button {
+          margin-top: 20%; } }
     @media (min-width: 992px) {
       #section-3 .modal-content {
         display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-areas: "m t"; }
+        grid-template-areas: "m t";
+        grid-template-columns: 70% auto; }
         #section-3 .modal-content h2 {
-          padding-top: 15%; } }
+          padding: 15% 0 5% 0; } }
     #section-3 .modal-content #text {
       grid-area: t;
+      place-items: center;
       text-align: center; }
       #section-3 .modal-content #text button:link,
       #section-3 .modal-content #text button:visited {
@@ -682,12 +688,15 @@ header {
       #section-3 .modal-content #text button:active {
         background-color: #E9F9FF;
         transition: 0.2s; }
+      @media (min-width: 992px) {
+        #section-3 .modal-content #text h2 {
+          margin-top: 25%; } }
     #section-3 .modal-content #map-containter {
       grid-area: m; }
   #section-3 .close {
-    color: #aaaaaa;
+    color: #122F69;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold; }
   #section-3 .close:hover,
   #section-3 .close:focus {
@@ -695,8 +704,8 @@ header {
     cursor: pointer;
     text-decoration: none; }
   #section-3 #button-container {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center; }
     #section-3 #button-container button:link,
     #section-3 #button-container button:visited {
@@ -712,8 +721,13 @@ header {
         padding-left: 15px; }
   #section-3 #map-container #map {
     background-color: #2767C5;
-    height: 350px;
+    height: 330px;
+    margin-top: 5%;
     width: 100%; }
     @media (min-width: 768px) {
       #section-3 #map-container #map {
-        height: 550px; } }
+        height: 350px;
+        margin-top: 0; } }
+    @media (min-width: 992px) {
+      #section-3 #map-container #map {
+        height: 600px; } }

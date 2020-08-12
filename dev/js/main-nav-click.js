@@ -1,3 +1,3 @@
 
 // adds event listener for scrollto gsap plugin
-$("header #menu ul li").on("click", scrollIndex);
+$("header #menu ul li button").on("click", scrollIndex);

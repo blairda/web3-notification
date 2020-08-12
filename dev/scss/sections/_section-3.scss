@@ -25,100 +25,121 @@
         }
     }
 
-.modal {
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Full height */
-    overflow: auto;
-    /* Full width */
-    height: 100%;
-    /* Hidden by default */
-    position: fixed;
-    /* Location of the box */
-    left: 0;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Stay in place */
-    z-index: 1;
-    display: none;
-    top: 0;
-    width: 100%;
-}
+    .modal {
+        /* Enable scroll if needed */
+        // background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba($dark-blue, 0.6);
+        /* Full height */
+        overflow: auto;
+        /* Full width */
+        height: 100%;
+        /* Hidden by default */
+        position: fixed;
+        /* Location of the box */
+        left: 0;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Stay in place */
+        z-index: 1;
+        display: none;
+        top: 0;
+        width: 100%;
+    }
 
-.modal-content {
-    background-color: $light-blue;
-    border: 1px solid #888;
-    height: 75vh;
-    margin: auto;
-    padding: 20px;
-    width: 90%;
-    #go-button{
+    .modal-content {
+        background-color: $light-blue;
+        border-bottom: 10px solid $yellow;
+        height: 75vh;
+        margin: auto;
+        padding: 20px;
+        width: 90%;
 
-        background-color: $yellow;
-        width: 150px;
-        height: 50px;
-        margin: 1%;
-        a{
-            font-size: 1em;
-            color: $dark-blue;
-            i{
+        #go-button {
+            background-color: $yellow;
+            height: 50px;
+            margin: 5%;
+            width: 125px;
+
+            a {
                 color: $dark-blue;
                 font-size: 1em;
-                padding: 0 5% 0 5%;
+                text-align: center;
+
+                i {
+                    color: $dark-blue;
+                    font-size: 1em;
+                    padding-left: 7%;
+                }
+            }
+
+            @include lg {
+                margin-top: 20%;
             }
         }
-    }
-    @include lg{
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-areas: "m t";
-        h2{
-            padding-top: 15%;
+
+        @include lg {
+            display: grid;
+            grid-template-areas: "m t";
+            grid-template-columns: 70% auto;
+
+            h2 {
+                padding: 15% 0 5% 0;
+            }
         }
 
-        }
-        #text{
+        #text {
             grid-area: t;
+            place-items: center;
             text-align: center;
+
             button:link,
             button:visited {
                 transition: 0.2s;
             }
+
             button:hover,
             button:active {
                 background-color: $light-blue;
                 transition: 0.2s;
             }
+
+            h2 {
+                @include lg {
+                    margin-top: 25%;
+                }
+            }
         }
-        #map-containter{
+
+        #map-containter {
             grid-area: m;
         }
+    }
 
-}
+    .close {
+        color: $dark-blue;
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+    }
 
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+    .close:hover,
+    .close:focus {
+        color: #000;
+        cursor: pointer;
+        text-decoration: none;
+    }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    cursor: pointer;
-    text-decoration: none;
-}
-    #button-container{
-        display: flex;
+    #button-container {
         align-items: center;
+        display: flex;
         justify-content: center;
+
         button:link,
         button:visited {
             transition: 0.2s;
         }
+
         button:hover,
         button:active {
             background-color: $light-blue;
@@ -129,7 +150,7 @@
             font-weight: bold;
             width: 200px;
 
-            i{
+            i {
                 padding-left: 15px;
             }
         }
@@ -138,11 +159,17 @@
     #map-container {
         #map {
             background-color: $blue;
-            height: 350px;
+            height: 330px;
+            margin-top: 5%;
             width: 100%;
-    
+
             @include md {
-                height: 550px;
+                height: 350px;
+                margin-top: 0;
+            }
+
+            @include lg {
+                height: 600px;
             }
         }
     }

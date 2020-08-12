@@ -35,17 +35,19 @@ header {
                 font-family: 'Lora', serif;
                 font-weight: 700;
                 margin: 0 20px;
+                color: $yellow;
+                background-color: rgba(0, 0, 0, 0);
 
-                a:link,
-                a:visited {
+                button:link,
+                button:visited {
                     color: $yellow;
                     font-size: 1.3em;
                     text-decoration: none;
                     transition: 0.3s;
                 }
 
-                a:hover,
-                a:active {
+                button:hover,
+                button:active {
                     color: $light-blue;
                     transition: 0.3s;
                 }

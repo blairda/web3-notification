@@ -1,4 +1,7 @@
 
+// @codekit-prepend "nav-scroll.js";
+// @codekit-prepend "main-nav-click.js";
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
