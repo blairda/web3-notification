@@ -86,7 +86,7 @@
                                 <p>22 Ocean Boulevard</p>
                                 <p>Best Beach, New Jersey</p>
                                 <p>07924</p>
-                                <button id="go-button" class="yellow-button"><a>Go<i class="fas fa-directions"></i></a></button>
+                                <button id="go-button" class="yellow-button"><a href="https://www.google.com/maps/place/Atlantic+City+Aquarium/@39.3769075,-74.4206003,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbf3f8457d555ec45!8m2!3d39.3769065!4d-74.420053" target="_blank">Go<i class="fas fa-directions"></i></a></button>
                             </div>
                             <section id="map-container">
                                 <div>
@@ -147,100 +147,91 @@
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: {
-                    lat: -33.914745,
-                    lng: 25.103129
+                    lat: 39.376938,
+                    lng: -74.420056
                 },
                 zoom: 12,
 
                 // change to satellite with labels default view
-                mapTypeId: 'hybrid',
-
-                // hide school
-                // hide: [{
-                //     featureType: "poi.school",
-                //     stylers: [{
-                //         visibility: "off"
-                //     }]
-                // }],
+                // mapTypeId: 'roadmap',
 
                 styles: [
-                    // change to dark brown geometry
+                    // change to teal geometry
                     {
                         elementType: 'geometry',
                         stylers: [{
-                            color: '#150700'
+                            color: '#139ECF'
                         }]
                     },
-                     // change to brown text stroke
+                     // change to dark blue text stroke
                     {
                         elementType: 'labels.text.stroke',
                         stylers: [{
-                            color: '#3F2311'
+                            color: '#122F69'
                         }]
                     },
-                    // change to orange text fill
+                    // change to yellow text fill
                     {
                         elementType: 'labels.text.fill',
                         stylers: [{
-                            color: '#E18A37'
+                            color: '#E9F9FF'
                         }]
                     },
                     {
-                        featureType: 'administrative.locality',
+                        featureType: 'poi.attraction',
                         elementType: 'labels.text.fill',
                         stylers: [{
-                            color: '#d59563'
-                        }]
-                    },
-                    {
-                        featureType: 'poi',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#d59563'
-                        }]
-                    },
-                    {
-                        // change to green
-                        featureType: 'poi.park',
-                        elementType: 'geometry',
-                        stylers: [{
-                            color: '#141A02'
+                            color: '#F9C243'
                         }]
                     },
                     {
                         featureType: 'poi.park',
                         elementType: 'labels.text.fill',
                         stylers: [{
-                            color: '#6b9a76'
+                            color: '#E9F9FF'
                         }]
                     },
                     {
-                        featureType: 'road',
-                        elementType: 'geometry',
+                        featureType: 'poi.park',
+                        // elementType: 'geometry',
                         stylers: [{
-                            color: '#38414e'
+                            // color: '#141A02'
+                            visibility: "off"
                         }]
                     },
+                    // {
+                    //     featureType: 'poi.park',
+                    //     elementType: 'labels.text.fill',
+                    //     stylers: [{
+                    //         color: '#6b9a76'
+                    //     }]
+                    // },
+                    // {
+                    //     featureType: 'road',
+                    //     elementType: 'geometry',
+                    //     stylers: [{
+                    //         color: '#122F69'
+                    //     }]
+                    // },
+                    // {
+                    //     featureType: 'road',
+                    //     elementType: 'geometry.stroke',
+                    //     stylers: [{
+                    //         color: '#E9F9FF'
+                    //     }]
+                    // },
+                    // {
+                    //     featureType: 'road',
+                    //     elementType: 'labels.text.fill',
+                    //     stylers: [{
+                    //         color: '#9ca5b3'
+                    //     }]
+                    // },
                     {
-                        featureType: 'road',
-                        elementType: 'geometry.stroke',
-                        stylers: [{
-                            color: '#212a37'
-                        }]
-                    },
-                    {
-                        featureType: 'road',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#9ca5b3'
-                        }]
-                    },
-                    {
-                        // hide school
-                        featureType: 'poi.school',
+                        // hide hotel
+                        featureType: 'poi.business',
                         // elementType: 'labels.text.fill',
                         stylers: [{
-                            // color: '#9ca5b3'
                             visibility: "off"
                         }]
                     },
@@ -248,73 +239,73 @@
                         featureType: 'road.highway',
                         elementType: 'geometry',
                         stylers: [{
-                            color: '#746855'
+                            color: '#2767C5'
                         }]
                     },
                     {
                         featureType: 'road.highway',
                         elementType: 'geometry.stroke',
                         stylers: [{
-                            color: '#1f2835'
+                            color: '#122F69'
                         }]
                     },
-                    {
-                        featureType: 'road.highway',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#f3d19c'
-                        }]
-                    },
+                    // {
+                    //     featureType: 'road.highway',
+                    //     elementType: 'labels.text.fill',
+                    //     stylers: [{
+                    //         color: '#f3d19c'
+                    //     }]
+                    // },
                     {
                         featureType: 'transit',
                         elementType: 'geometry',
                         stylers: [{
-                            color: '#2f3948'
+                            color: '#122F69'
                         }]
                     },
+                    // {
+                    //     featureType: 'transit.station',
+                    //     elementType: 'labels.text.fill',
+                    //     stylers: [{
+                    //         color: '#d59563'
+                    //     }]
+                    // },
                     {
-                        featureType: 'transit.station',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#d59563'
-                        }]
-                    },
-                    {
-                        // change to light-blue
+                        // change to blue
                         featureType: 'water',
                         elementType: 'geometry',
                         stylers: [{
-                            color: '#AFBBBA'
+                            color: '#122F69'
                         }]
                     },
                     {
                         featureType: 'water',
                         elementType: 'labels.text.fill',
                         stylers: [{
-                            color: '#515c6d'
+                            color: '#E9F9FF'
                         }]
                     },
                     {
                         featureType: 'water',
                         elementType: 'labels.text.stroke',
                         stylers: [{
-                            color: '#17263c'
+                            color: '#122F69'
                         }]
                     }
                 ]
             });
 
             var myLatLng = {
-                lat: -33.914745,
-                lng: 25.103129
+                lat: 39.376938,
+                lng: -74.420056
             };
 
             var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,
                 draggable: true,
-                animation: google.maps.Animation.DROP,
-                title: "Hello!"
+                animation: google.maps.Animation.DROP
+                // title: "Hello!"
             });
 
             marker.addListener("click", toggleBounce);

@@ -376,7 +376,8 @@ p {
   color: #F9C243;
   border-style: none;
   background-color: #2767C5;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  outline: none; }
 
 /* =============
     Forms
@@ -686,7 +687,7 @@ header {
         transition: 0.2s; }
       #section-3 .modal-content #text button:hover,
       #section-3 .modal-content #text button:active {
-        background-color: #E9F9FF;
+        background-color: rgba(19, 158, 207, 0.5);
         transition: 0.2s; }
       @media (min-width: 992px) {
         #section-3 .modal-content #text h2 {
@@ -694,15 +695,16 @@ header {
     #section-3 .modal-content #map-containter {
       grid-area: m; }
   #section-3 .close {
-    color: #122F69;
+    color: #F9C243;
     float: right;
     font-size: 35px;
     font-weight: bold; }
   #section-3 .close:hover,
   #section-3 .close:focus {
-    color: #000;
+    color: rgba(19, 158, 207, 0.5);
     cursor: pointer;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: 0.2s; }
   #section-3 #button-container {
     align-items: center;
     display: flex;
@@ -712,7 +714,7 @@ header {
       transition: 0.2s; }
     #section-3 #button-container button:hover,
     #section-3 #button-container button:active {
-      background-color: #E9F9FF;
+      background-color: rgba(19, 158, 207, 0.5);
       transition: 0.2s; }
     #section-3 #button-container #myBtn {
       font-weight: bold;
