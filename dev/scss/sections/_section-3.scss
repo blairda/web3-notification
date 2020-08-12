@@ -48,12 +48,54 @@
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: $light-blue;
     border: 1px solid #888;
-    height: 75%;
+    height: 75vh;
     margin: auto;
     padding: 20px;
-    width: 80%;
+    width: 90%;
+    #go-button{
+
+        background-color: $yellow;
+        width: 150px;
+        height: 50px;
+        margin: 1%;
+        a{
+            font-size: 1em;
+            color: $dark-blue;
+            i{
+                color: $dark-blue;
+                font-size: 1em;
+                padding: 0 5% 0 5%;
+            }
+        }
+    }
+    @include lg{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: "m t";
+        h2{
+            padding-top: 15%;
+        }
+
+        }
+        #text{
+            grid-area: t;
+            text-align: center;
+            button:link,
+            button:visited {
+                transition: 0.2s;
+            }
+            button:hover,
+            button:active {
+                background-color: $light-blue;
+                transition: 0.2s;
+            }
+        }
+        #map-containter{
+            grid-area: m;
+        }
+
 }
 
 .close {
@@ -94,18 +136,14 @@
     }
 
     #map-container {
-        background-color: $blue;
-        padding-bottom: 5%;
-    
         #map {
             background-color: $blue;
-            height: 300px;
+            height: 350px;
             width: 100%;
     
             @include md {
-                height: 450px;
+                height: 550px;
             }
         }
     }
-
 }

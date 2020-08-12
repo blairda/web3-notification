@@ -339,6 +339,7 @@ a {
     .yellow-bar {
       border-bottom: solid 8px #F9C243;
       margin: 5% 25%; } }
+
 /* =============
     Typography
 ============= */
@@ -372,6 +373,7 @@ p {
   @media (min-width: 768px) {
     .yellow-button {
       padding: 1%; } }
+
 /* =============
     Forms
 ============= */
@@ -440,6 +442,7 @@ header {
       display: grid;
       grid-template-areas: "l . m";
       grid-template-columns: 4% auto auto; } }
+
 /* =============
     Footer
 ============= */
@@ -512,6 +515,7 @@ header {
   @media (min-width: 992px) {
     #section-1 div {
       height: 95vh; } }
+
 #section-1 h1 {
   background-color: #139ECF;
   color: #E9F9FF;
@@ -530,6 +534,7 @@ header {
       margin-right: 25%;
       padding: 1% 8%;
       position: absolute; } }
+
 #section-1 p {
   background-color: #E9F9FF;
   color: #2767C5;
@@ -552,6 +557,7 @@ header {
   @media (min-width: 768px) {
     #section-2 h2 {
       font-size: 2em; } }
+
 #section-2 #cards p {
   color: #122F69;
   font-size: 1.3em;
@@ -641,12 +647,43 @@ header {
     top: 0;
     width: 100%; }
   #section-3 .modal-content {
-    background-color: #fefefe;
+    background-color: #E9F9FF;
     border: 1px solid #888;
-    height: 75%;
+    height: 75vh;
     margin: auto;
     padding: 20px;
-    width: 80%; }
+    width: 90%; }
+    #section-3 .modal-content #go-button {
+      background-color: #F9C243;
+      width: 150px;
+      height: 50px;
+      margin: 1%; }
+      #section-3 .modal-content #go-button a {
+        font-size: 1em;
+        color: #122F69; }
+        #section-3 .modal-content #go-button a i {
+          color: #122F69;
+          font-size: 1em;
+          padding: 0 5% 0 5%; }
+    @media (min-width: 992px) {
+      #section-3 .modal-content {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: "m t"; }
+        #section-3 .modal-content h2 {
+          padding-top: 15%; } }
+    #section-3 .modal-content #text {
+      grid-area: t;
+      text-align: center; }
+      #section-3 .modal-content #text button:link,
+      #section-3 .modal-content #text button:visited {
+        transition: 0.2s; }
+      #section-3 .modal-content #text button:hover,
+      #section-3 .modal-content #text button:active {
+        background-color: #E9F9FF;
+        transition: 0.2s; }
+    #section-3 .modal-content #map-containter {
+      grid-area: m; }
   #section-3 .close {
     color: #aaaaaa;
     float: right;
@@ -673,13 +710,10 @@ header {
       width: 200px; }
       #section-3 #button-container #myBtn i {
         padding-left: 15px; }
-  #section-3 #map-container {
+  #section-3 #map-container #map {
     background-color: #2767C5;
-    padding-bottom: 5%; }
-    #section-3 #map-container #map {
-      background-color: #2767C5;
-      height: 300px;
-      width: 100%; }
-      @media (min-width: 768px) {
-        #section-3 #map-container #map {
-          height: 450px; } }
+    height: 350px;
+    width: 100%; }
+    @media (min-width: 768px) {
+      #section-3 #map-container #map {
+        height: 550px; } }
