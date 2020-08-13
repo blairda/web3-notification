@@ -643,8 +643,7 @@ header {
     /* Sit on top */
     padding-top: 100px;
     /* Stay in place */
-    z-index: 1;
-    display: none;
+    z-index: 13000;
     top: 0;
     width: 100%; }
   #section-3 .modal-content {
