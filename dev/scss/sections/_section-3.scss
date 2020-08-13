@@ -115,7 +115,7 @@
     }
 
     .close {
-        color: $yellow;
+        color: $dark-blue;
         float: right;
         font-size: 35px;
         font-weight: bold;
@@ -123,7 +123,7 @@
 
     .close:hover,
     .close:focus {
-        color: rgba($teal, 0.5);
+        color: #A72929;
         cursor: pointer;
         text-decoration: none;
         transition: 0.2s;

@@ -630,7 +630,6 @@ header {
       #section-3 p {
         margin: 1% 20%; } }
   #section-3 .modal {
-    /* Enable scroll if needed */
     /* Fallback color */
     background-color: rgba(18, 47, 105, 0.6);
     /* Full height */
@@ -695,13 +694,13 @@ header {
     #section-3 .modal-content #map-containter {
       grid-area: m; }
   #section-3 .close {
-    color: #F9C243;
+    color: #122F69;
     float: right;
     font-size: 35px;
     font-weight: bold; }
   #section-3 .close:hover,
   #section-3 .close:focus {
-    color: rgba(19, 158, 207, 0.5);
+    color: #A72929;
     cursor: pointer;
     text-decoration: none;
     transition: 0.2s; }
