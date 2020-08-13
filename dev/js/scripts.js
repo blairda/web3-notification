@@ -1,7 +1,6 @@
 
 // @codekit-prepend "nav-scroll.js";
 // @codekit-prepend "main-nav-click.js";
-// @codekit-prepend "scrollTrigger.js";
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -12,7 +11,7 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-gsap.set(modal,{alpha:0,scale:0.5, display:"none"});
+gsap.set(modal,{alpha:0,scale:0.33, display:"none"});
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -20,14 +19,17 @@ btn.onclick = function() {
   console.log("show modal!");
   //modal.style.display = "block";
   // modal.style.display = "textTimeline";
- gsap.to(modal,{duration:1, alpha:1 ,scale:1, display:"block"});
- gsap.from("#text h2", {duration:3, alpha:0, yPercent: 50});
+ gsap.to(modal,{duration:.5, alpha:1 ,scale:1, display:"block"})
+
+ gsap.from("#text h2", {duration:1.5, alpha:0, yPercent: -50}, "title")
+ gsap.from("#text p", {duration:1.5, alpha:0, yPercent: -50, stagger:0.25}, "body")
+ gsap.from("#text button", {duration:1.5, alpha:0, yPercent: 100}, "button");
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   //modal.style.display = "none";
-  gsap.to(modal,{duration:1, alpha:0, scale:0.5,display:"none"});
+  gsap.to(modal,{duration:.5, alpha:0, scale:0.33,display:"none"});
 
   
 }
@@ -36,6 +38,6 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     //modal.style.display = "none";
-    gsap.to(modal,{duration:1, alpha:0, scale:0.5,display:"none"});
+    gsap.to(modal,{duration:.5, alpha:0, scale:0.33,display:"none"});
   }
 }
