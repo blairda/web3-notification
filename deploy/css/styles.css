@@ -318,13 +318,13 @@ template {
     Base
 ============= */
 figure {
-  padding: 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 ul {
-  padding: 0;
+  list-style-type: none;
   margin: 0;
-  list-style-type: none; }
+  padding: 0; }
   ul li {
     list-style: none; }
 
@@ -333,8 +333,8 @@ a {
 
 .yellow-bar {
   border-bottom: solid 5px #F9C243;
-  width: 50%;
-  margin: 8% 25%; }
+  margin: 8% 25%;
+  width: 50%; }
   @media (min-width: 768px) {
     .yellow-bar {
       border-bottom: solid 8px #F9C243;
@@ -361,21 +361,21 @@ p {
   background-color: #F9C243;
   border: solid 5px #F9C243;
   border-radius: 10px;
-  padding: 2%;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  font-family: 'Lato', sans-serif;
   color: #122F69;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
   font-size: 1.3em;
-  cursor: pointer; }
+  left: 50%;
+  margin: 0;
+  padding: 2%;
+  top: 50%; }
   @media (min-width: 768px) {
     .yellow-button {
       padding: 1%; } }
 .nav {
-  color: #F9C243;
-  border-style: none;
   background-color: #2767C5;
+  border-style: none;
+  color: #F9C243;
   font-size: 1.3em;
   outline: none; }
 
@@ -423,12 +423,12 @@ header {
       display: flex;
       justify-content: flex-end; }
       header #menu ul li {
+        background-color: rgba(0, 0, 0, 0);
+        color: #F9C243;
         cursor: pointer;
         font-family: 'Lora', serif;
         font-weight: 700;
-        margin: 0 20px;
-        color: #F9C243;
-        background-color: rgba(0, 0, 0, 0); }
+        margin: 0 20px; }
         header #menu ul li button:link,
         header #menu ul li button:visited {
           color: #F9C243;
@@ -483,7 +483,6 @@ header {
             transition: 0.3s; }
           #footer #l ul li i:hover, #footer #l ul li i:active {
             color: #122F69;
-            font-size: 1.51em;
             transition: 0.3s; }
   #footer #r {
     grid-area: r;
@@ -528,26 +527,27 @@ header {
   font-size: 2.5em;
   font-style: italic;
   font-weight: 700;
-  padding: 1%;
-  text-align: center;
   letter-spacing: 1px;
-  padding: 2%; }
+  padding: 2%;
+  text-align: center; }
   @media (min-width: 992px) {
     #section-1 h1 {
       bottom: 25%;
-      font-size: 3em;
+      font-size: 3.5em;
       margin-right: 25%;
       padding: 1% 8%;
       position: absolute; } }
 #section-1 p {
   background-color: #E9F9FF;
   color: #2767C5;
-  font-size: 1.9em;
+  font-size: 2em;
   font-weight: 400;
   margin: 6% 0 3%;
   padding: 2% 21%;
   text-align: center; }
-
+  @media (min-width: 768px) {
+    #section-1 p {
+      font-size: 2.5em; } }
 /* =============
     Section 2
 ============= */
@@ -630,21 +630,13 @@ header {
       #section-3 p {
         margin: 1% 20%; } }
   #section-3 .modal {
-    /* Fallback color */
     background-color: rgba(18, 47, 105, 0.6);
-    /* Full height */
     overflow: auto;
-    /* Full width */
     height: 100%;
-    /* Hidden by default */
     position: fixed;
-    /* Location of the box */
     left: 0;
-    /* Sit on top */
     padding-top: 100px;
-    /* Stay in place */
-    z-index: 1;
-    display: none;
+    z-index: 13000;
     top: 0;
     width: 100%; }
   #section-3 .modal-content {

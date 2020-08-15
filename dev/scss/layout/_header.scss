@@ -31,12 +31,12 @@ header {
             justify-content: flex-end;
 
             li {
+                background-color: rgba(0, 0, 0, 0);
+                color: $yellow;
                 cursor: pointer;
                 font-family: 'Lora', serif;
                 font-weight: 700;
                 margin: 0 20px;
-                color: $yellow;
-                background-color: rgba(0, 0, 0, 0);
 
                 button:link,
                 button:visited {
