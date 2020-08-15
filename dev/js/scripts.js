@@ -17,8 +17,6 @@ gsap.set(modal,{alpha:0,scale:0.33, display:"none"});
 btn.onclick = function() {
 
   console.log("show modal!");
-  //modal.style.display = "block";
-  // modal.style.display = "textTimeline";
  gsap.to(modal,{duration:.5, alpha:1 ,scale:1, display:"block"})
 
  gsap.from("#text h2", {duration:1.5, alpha:0, yPercent: -50}, "title")
@@ -37,7 +35,6 @@ span.onclick = function() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    //modal.style.display = "none";
     gsap.to(modal,{duration:.5, alpha:0, scale:0.33,display:"none"});
   }
 }

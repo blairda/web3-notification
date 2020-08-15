@@ -1,30 +1,28 @@
 /* =============
     Buttons
 ============= */
-.yellow-button{
+.yellow-button {
     background-color: $yellow;
     border: solid 5px $yellow;
     border-radius: 10px;
-    padding: 2%;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-
-    font-family: 'Lato', sans-serif;
     color: $dark-blue;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
     font-size: 1.3em;
+    left: 50%;
+    margin: 0;
+    padding: 2%;
+    top: 50%;
 
-    @include md{
+    @include md {
         padding: 1%;
     }
-
-    cursor: pointer;
 }
 
-.nav{
-    color: $yellow;
-    border-style: none;
+.nav {
     background-color: $blue;
+    border-style: none;
+    color: $yellow;
     font-size: 1.3em;
     outline: none;
 }

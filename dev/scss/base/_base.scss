@@ -1,29 +1,31 @@
 /* =============
     Base
 ============= */
-figure{
-    padding: 0;
+figure {
     margin: 0;
+    padding: 0;
 }
 
-ul{
-    padding: 0;
-    margin: 0;
+ul {
     list-style-type: none;
-    li{
+    margin: 0;
+    padding: 0;
+
+    li {
         list-style: none;
     }
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.yellow-bar{
+.yellow-bar {
     border-bottom: solid 5px $yellow;
-    width: 50%;
     margin: 8% 25%;
-    @include md{
+    width: 50%;
+
+    @include md {
         border-bottom: solid 8px $yellow;
         margin: 5% 25%;
     }

@@ -22,14 +22,13 @@
         font-size: 2.5em;
         font-style: italic;
         font-weight: 700;
-        padding: 1%;
-        text-align: center;
         letter-spacing: 1px;
         padding: 2%;
+        text-align: center;
 
         @include lg {
             bottom: 25%;
-            font-size: 3em;
+            font-size: 3.5em;
             margin-right: 25%;
             padding: 1% 8%;
             position: absolute;
@@ -39,10 +38,14 @@
     p {
         background-color: $light-blue;
         color: $blue;
-        font-size: 1.9em;
+        font-size: 2em;
         font-weight: 400;
         margin: 6% 0 3%;
         padding: 2% 21%;
         text-align: center;
+
+        @include md {
+            font-size: 2.5em;
+        }
     }
 }
