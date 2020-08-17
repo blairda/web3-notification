@@ -16,7 +16,7 @@ gsap.set(modal,{alpha:0,scale:0.33, display:"none"});
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
 
-  console.log("show modal!");
+  // console.log("show modal!");
  gsap.to(modal,{duration:.5, alpha:1 ,scale:1, display:"block"})
 
  gsap.from("#text h2", {duration:1.5, alpha:0, yPercent: -50}, "title")
